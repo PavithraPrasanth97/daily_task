@@ -1,0 +1,20 @@
+*{
+    margin: 20px;
+    background-color:rgba(222, 184, 135, 0.371);
+    padding:0px;
+}
+.ele1 img{
+    height: 200px;
+    width: 400px;
+}
+.ele2{
+    font-size:large;
+    font-variant:normal;
+    text-wrap:wrap;
+}
+.ele3{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    
+}
