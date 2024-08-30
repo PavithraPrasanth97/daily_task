@@ -1,0 +1,46 @@
+.g-parent{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    height:100vh;
+    grid-row-gap:10px;
+    grid-column-gap:10px;
+    margin:10px;
+    background-color: black;
+    padding:15px;
+}
+.g1{
+    background:orangered ;
+}
+.g2{
+    background:orange ;
+}
+.g3{
+    background:green ;
+}
+.g4{
+    background: darkgreen;
+}
+.g5{
+    background:palegreen ;
+}
+.g6{
+    background: orange;
+    grid-row:2;
+    grid-column:1/span -1;
+}
+.g7{
+    background:orangered ;
+    grid-row:2;
+    grid-column:2/span -1;
+}
+.g8{
+    background: orange;
+    grid-row:2;
+    grid-column:3/span 5;
+}
+.g9{
+    background: green;
+    grid-row:3;
+    grid-column:1/span 5;
+}
