@@ -1,0 +1,66 @@
+.g-parent{
+    display:grid;
+    height:100vh;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-row-gap:20px;
+    grid-column-gap:20px;
+    background-color: black;
+    margin: 10px;
+    padding:15px;
+    
+}
+.grid1{
+    background: darkgreen;
+}
+.grid2{
+    background: orange;
+}
+.grid3{
+    background: green;
+}
+.grid4{
+    background: orangered;
+}
+.grid5{
+    background: green;
+}
+.grid6{
+    background: orange;
+}
+.grid7{
+    background: orange;
+}
+.grid8{
+    background: darkgreen;
+}
+.grid9{
+    background: orange;
+}
+.grid10{
+    background: green;
+}
+.grid11{
+    background: lightcoral;
+}
+.grid12{
+    background: orangered;
+}
+.grid13{
+    background: green;
+}
+.grid14{
+    background: orangered;
+}
+.grid15{
+    background: green;
+}
+.grid16{
+    background: orangered;
+}
+.grid17{
+    background: green;
+}
+.grid18{
+    background: darkgreen;
+}
