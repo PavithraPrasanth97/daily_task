@@ -20,7 +20,6 @@ ol{
     right: 10px;
     list-style-type: none;
     gap:10px;
-    /* justify-content: end; */
     margin-right:20px;
     padding:0;
     
@@ -46,7 +45,7 @@ ol{
  
    width:30px;
    height:30px;
-   margin-right:10px;
+   margin-right:0px:
 }
 #navdivlogo h1{
     color: rgb(12, 84, 216);
@@ -84,30 +83,24 @@ footer p {
     display: flex; 
 }
 
-#navlinks ul {
-    display: flex; 
-    list-style-type: none;
-    gap: 10px;
-    margin-right: 20px;
-    padding: 0;
-}
-/* #secId
-{
-   margin:auto; 
-} */
 
 
 @media (max-width:500px)
 {
        #navlinks{
+        display:flex;
         justify-content: space-around;
-        /* align-items:center; */
+        flex-direction: row; 
+        align-items: center; 
     }
     
     #menu-icon
     {
         display:inline-block;
-        margin-left: auto;      
+        cursor:pointer;
+        font-size: 24px;
+        color:white;
+        margin-left: 10px;      
     }
 
     #navdivli
@@ -117,42 +110,19 @@ footer p {
     }
     #navlinks.active #navdivli
     {
-        display: flex; /* Show when active */
-        flex-direction: column; /* Stack items */
-        align-items: flex-start; /* Align items to the left */
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start; 
+        width:100px;
     }
 
     #navlinks.active ul {
-        flex-direction: column; /* Stack items */
+        display:flex;
+        flex-direction: column; 
+        width:100%;
     }
 
     section {
         margin-top: 80px;
     }
     }
-    /* #navlinks.active
-    {
-        flex-direction: column;        
-    }
-
-    #navlinks.active ul {
-        display:block;
-         flex-direction: column;      
-
-    }
-    #navlinks ul {
-         display:none;
-         flex-direction: column;
-        /* width:100%; */
-        position:absolute;
-        top:50px;
-        left:30px;
-        /* background-color: rgb(101, 160, 160); */
-        z-index:9;
-        };
-        section{
-            margin-top:80px;
-        }
-     */
-   
-}
