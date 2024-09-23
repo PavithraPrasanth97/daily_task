@@ -110,7 +110,7 @@ footer p {
     }
     #navlinks.active #navdivli
     {
-        display: flex;
+        display: block;
         flex-direction: column; 
         align-items: flex-start; 
         width:100px;
@@ -123,6 +123,6 @@ footer p {
     }
 
     section {
-        margin-top: 80px;
+        margin-top: 40px;
     }
     }
