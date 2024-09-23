@@ -13,13 +13,6 @@ ol{
     display:block;
     justify-content: flex-start;
 }
-/* header{
-    background-color:rgb(101, 160, 160);
-    padding:10px;
-    margin-top: 10px;
-    color:black;
-   
-} */
 
  #navlinks ul
 {
@@ -35,26 +28,29 @@ ol{
 
 #navlinks
 {
-    background-color: rgb(101, 160, 160);;
+    background-color: rgb(101, 160, 160);
     display:flex;
     justify-content: space-between;
     align-items:center;
-    position: relative;
+    padding:10px;
+    position:relative;
+    z-index:10;
 }
+#navdivlogo {
+    display: flex;
+    align-items: center;
+}
+
 #navdivlogo img
 {
-   position: absolute; 
-   top: 20px;
+ 
    width:30px;
    height:30px;
-   /* overflow-wrap: 10px; */
-   /* display:flex; */
+   margin-right:10px;
 }
 #navdivlogo h1{
     color: rgb(12, 84, 216);
-    /* margin-top: 10px; */
-    margin-inline-start: 50px;
-    width:200px;
+  
 }
 footer{
     background-color:rgb(101, 160, 160);
@@ -78,23 +74,63 @@ footer p {
 }
 #menu-icon{
     display:none;
-    /* cursor:pointer; */
+    /* margin-right: 20px; */
+    cursor:pointer;
     font-size: 24px;
     color:white;
+    /* margin-right:auto; */
 }
+#navdivli {
+    display: flex; 
+}
+
+#navlinks ul {
+    display: flex; 
+    list-style-type: none;
+    gap: 10px;
+    margin-right: 20px;
+    padding: 0;
+}
+/* #secId
+{
+   margin:auto; 
+} */
+
 
 @media (max-width:500px)
 {
        #navlinks{
-        display:block;
-
+        justify-content: space-around;
+        /* align-items:center; */
     }
     
     #menu-icon
     {
-        display:inline-block;        
+        display:inline-block;
+        margin-left: auto;      
     }
-    #navlinks.active
+
+    #navdivli
+    {
+        display:none;
+        width:100%;
+    }
+    #navlinks.active #navdivli
+    {
+        display: flex; /* Show when active */
+        flex-direction: column; /* Stack items */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    #navlinks.active ul {
+        flex-direction: column; /* Stack items */
+    }
+
+    section {
+        margin-top: 80px;
+    }
+    }
+    /* #navlinks.active
     {
         flex-direction: column;        
     }
@@ -106,12 +142,17 @@ footer p {
     }
     #navlinks ul {
          display:none;
-    };
-    /* #navlinks.active li {
-        margin:10px 0;
-        flex-direction: column;
-        text-align:center;
-    }
+         flex-direction: column;
+        /* width:100%; */
+        position:absolute;
+        top:50px;
+        left:30px;
+        /* background-color: rgb(101, 160, 160); */
+        z-index:9;
+        };
+        section{
+            margin-top:80px;
+        }
      */
    
 }
