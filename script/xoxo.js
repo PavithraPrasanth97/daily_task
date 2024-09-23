@@ -69,6 +69,7 @@ function checkResult() {
     if (!board.includes('')) {
         messageElement.innerText = 'Draw';
         gameActive = false;
+        topMessageElement.innerText = '';
     }
 }
 
