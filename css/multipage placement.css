@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif; /* General font style */
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px; 
+}
+
+#placementdiv1 {
+    width: 100%; 
+    background-color: paleturquoise;
+    padding: 20px; 
+    margin-bottom: 20px; 
+}
+
+main {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+#placementdiv2, #placementdiv3, #placementdiv4, #placementdiv5 {
+    flex: 1;
+    background-color:lightgrey; 
+    padding: 15px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; 
+        }
+}

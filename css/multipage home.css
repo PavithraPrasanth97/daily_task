@@ -1,0 +1,13 @@
+#homediv h1{
+    color:brown;
+    text-decoration:underline;
+
+}
+#homediv img{
+    height:400px;
+    width:100%;
+}
+#homediv p{
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+}

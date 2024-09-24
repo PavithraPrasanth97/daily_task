@@ -1,0 +1,42 @@
+#aboutdiv1 h1{
+    color:mediumvioletred;
+    position: relative;
+    text-decoration: underline;
+}
+#aboutdiv1 ul{
+    text-align:left;
+    left: 20px;
+    position:relative;
+}
+#aboutdiv1 img{
+    width:700px;
+    height:300px;
+    position: relative;
+    left:40px;
+}
+#aboutdiv2 h1{
+    color:mediumvioletred;
+    position: relative;
+    text-decoration: underline;
+}
+#aboutdiv2 ul{
+    text-align:left;
+    left: 20px;
+    position:relative;
+}
+#aboutdiv2 img{
+    width:700px;
+    height:300px;
+    position: relative;
+    left:40px;
+
+}
+#aboutdiv1{
+    display:grid;
+    justify-content: center;
+}
+#aboutdiv2{
+    display:grid;
+    justify-content: center;
+}
+    
