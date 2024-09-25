@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0;
+    height: 100vh;
+    background-color: bisque;
+}
+
+#container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#wordDisplay {
+    font-size: 24px;
+    letter-spacing: 10px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 50px; /* Adjust width for single letter input */
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: lightgray;
+    cursor: not-allowed;
+}
