@@ -1,48 +1,56 @@
-const  Courses ={
-    title:"Courses",
+const Courses = {
+    title: "Courses",
     courses: [
-         "Java",
+        "Java",
         "JavaScript",
-        "Python" ] 
-    };
-const  Address ={
-    title:"Address",
-    addr:["Salem",
-        "Tamilnadu",
-        "India"]
+        "Python"
+    ]
 };
 
-function displayInfo()
-{
-    const infoDiv = document.getElementById('infoId');
-    const infoDiv1=document.getElementById('infoId1');
-    
-    let content  = `<h1>${Courses.title}</h1>`;
-     content += `<ul>`;
+const Address = {
+    title: "Address",
+    addr: ["Salem", "Tamilnadu", "India"]
+};
+
+function displayInfo() {
+    const footer = document.getElementById('footer');
+
+    const coursesDiv = document.createElement('div');
+    coursesDiv.classList.add('section', 'courses');
+
+    const coursesTitle = document.createElement('h1');
+    coursesTitle.textContent = Courses.title;
+    coursesDiv.appendChild(coursesTitle);
+
+    const coursesList = document.createElement('ul');
     Courses.courses.forEach(course => {
-        content += `<h4><li>${course}</li></h4>`;
+        const listItem = document.createElement('li');
+        const itemTitle = document.createElement('h4');
+        itemTitle.textContent = course;
+        listItem.appendChild(itemTitle);
+        coursesList.appendChild(listItem);
     });
-    content += `</ul>`;
-    infoDiv.innerHTML =content;
+    coursesDiv.appendChild(coursesList);
+    footer.appendChild(coursesDiv);
 
-    infoDiv.style.backgroundColor='#BCC6CC';
-    infoDiv.style.padding='20px';
-    infoDiv.style.borderRadius = '5px';
+    
+    const addressDiv = document.createElement('div');
+    addressDiv.classList.add('section', 'address');
 
+    const addressTitle = document.createElement('h1');
+    addressTitle.textContent = Address.title;
+    addressDiv.appendChild(addressTitle);
 
-    let content1= `<h1>${Address.title}</h1>`;
-    content +=`<ul>`;
-    Address.addr.forEach(addre=>{
-        content1 +=`<h4><li>${addre}</li></h4>`;
+    const addressList = document.createElement('ul');
+    Address.addr.forEach(addre => {
+        const listItem = document.createElement('li');
+        const itemTitle = document.createElement('h4');
+        itemTitle.textContent = addre;
+        listItem.appendChild(itemTitle);
+        addressList.appendChild(listItem);
     });
-    content1+=`</ul>`;
-    infoDiv1.innerHTML = content1;
-
-    infoDiv1.style.backgroundColor='#FFFF00';
-    infoDiv1.style.padding='20px';
-    infoDiv1.style.borderRadius = '5px';
-
-    document.body.style.backgroundColor = '#e0f7fa';
+    addressDiv.appendChild(addressList);
+    footer.appendChild(addressDiv);
 }
 
-window.addEventListener('load',displayInfo);
+window.addEventListener('load', displayInfo);
