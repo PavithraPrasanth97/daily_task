@@ -31,9 +31,9 @@ body {
     transition: background-color 0.3s;
 }
 
-.cell.flipped {
+/* .cell.flipped {
     background-color: white;
-}
+} */
 
 #scoreboard {
     margin-right: 20px; /* Space between scoreboard and board */
