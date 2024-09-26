@@ -1,15 +1,23 @@
 // script/Guess_the_word.js
 
-const words = ['apple', 'banana', 'cherry', 'grape', 'orange'];
+const words = [
+    { word: 'apple', hint: 'This fruit keeps a doctor away.'},
+    {word: 'banana', hint: 'This fruit liked by Monkey'},
+    {word: 'cherry', hint: 'This fruit looks like a small tomato'},
+    {word: 'grape', hint: 'This fruit is in purple colour'},
+    {word: 'orange', hint: 'This fruit name has a colour name'}
+];
 let selectedWord = '';
 let guessedLetters = [];
 let remainingGuesses = 5;
 
 function initializeGame() {
-    selectedWord = getRandomWord();
+    const wordObject =getRandomWord();
+    selectedWord =  wordObject.word;
+    const hint = wordObject.hint;
     guessedLetters = [];
     remainingGuesses = 10;
-    document.getElementById('topMessage').innerText = 'Hint : This is a fruit ' ;
+    document.getElementById('topMessage').innerText = 'Hint : ' + hint ;
 
     // Randomly reveal some letters
     revealRandomLetters();
