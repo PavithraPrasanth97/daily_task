@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: yellow;
+}
+
+#container {
+    display: flex; /* Use flexbox to arrange the board and controls */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    transition: background-color 0.3s;
+}
+
+.cell.flipped {
+    background-color: white;
+}
+
+#scoreboard {
+    margin-right: 20px; /* Space between scoreboard and board */
+    font-size: 24px;
+    display: flex;
+    flex-direction: column; /* Stack the scoreboard vertically */
+    justify-content: center; /* Center vertically */
+}
+
+#reset-button {
+    margin-top: 20px; /* Space above the button */
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
