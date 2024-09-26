@@ -21,9 +21,10 @@ body {
 }
 
 input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 50px; /* Adjust width for single letter input */
+    display :flex;
+    padding: 10px 10px;
+    margin: 10px;
+    width: 90%/* Adjust width for single letter input */
 }
 
 button {

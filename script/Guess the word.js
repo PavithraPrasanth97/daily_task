@@ -3,12 +3,13 @@
 const words = ['apple', 'banana', 'cherry', 'grape', 'orange'];
 let selectedWord = '';
 let guessedLetters = [];
-let remainingGuesses = 10;
+let remainingGuesses = 5;
 
 function initializeGame() {
     selectedWord = getRandomWord();
     guessedLetters = [];
     remainingGuesses = 10;
+    document.getElementById('topMessage').innerText = 'Hint : This is a fruit ' ;
 
     // Randomly reveal some letters
     revealRandomLetters();
@@ -68,11 +69,11 @@ function handleGuess() {
         if (checkWinCondition()) {
             document.getElementById('message').innerText = 'Congratulations! You guessed the word: ' + selectedWord;
             document.getElementById('guessId').disabled = true; // Disable guessing
-            setTimeout(initializeGame, 2000); // Reset after 2 seconds
+            setTimeout(initializeGame, 5000); // Reset after 2 seconds
         } else if (remainingGuesses <= 0) {
             document.getElementById('message').innerText = 'Better luck next time! The word was: ' + selectedWord;
             document.getElementById('guessId').disabled = true; // Disable guessing
-            setTimeout(initializeGame, 2000); // Reset after 2 seconds
+            setTimeout(initializeGame, 5000); // Reset after 2 seconds
         }
 
         updateWordDisplay();
