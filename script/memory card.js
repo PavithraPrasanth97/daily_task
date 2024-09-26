@@ -78,7 +78,9 @@ function unflipCards() {
 
     setTimeout(() => {
         firstCard.textContent = '?';
+        firstCard.classList.add('unflipped');
         secondCard.textContent = '?';
+        secondCard.classList.add('unflipped');
         resetBoard();
     }, 1000); // Wait 1 second before flipping back
 }
