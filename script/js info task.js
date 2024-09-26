@@ -28,6 +28,7 @@ function displayInfo() {
         const itemTitle = document.createElement('h4');
         itemTitle.textContent = course;
         listItem.appendChild(itemTitle);
+        listItem.style.listStyleType = 'none';
         coursesList.appendChild(listItem);
     });
     coursesDiv.appendChild(coursesList);
@@ -47,6 +48,7 @@ function displayInfo() {
         const itemTitle = document.createElement('h4');
         itemTitle.textContent = addre;
         listItem.appendChild(itemTitle);
+        listItem.style.listStyleType = 'none';
         addressList.appendChild(listItem);
     });
     addressDiv.appendChild(addressList);
