@@ -1,86 +1,52 @@
-const Courses = {
+const courses = {
     title: "Courses",
-    courses: [
+    items: [
         "Java",
         "JavaScript",
         "Python"
     ]
 };
 
-const Address = {
+const address = {
     title: "Address",
-    addr: ["Salem", "Tamilnadu", "India"]
+    items: ["Salem", "Tamilnadu", "India"]
 };
 
-const Business_Hour= {
-    title: "Bussiness Hour",
-    content : [
-        "Monday-Friday : 9:00 - 18:00",
-        "Saturday : 9:00 - 16:00",
-        "Sunday : Closed"
+const businessHour = {
+    title: "Business Hour",
+    items: [
+        "Monday-Friday: 9:00 - 18:00",
+        "Saturday: 9:00 - 16:00",
+        "Sunday: Closed"
     ]
 };
 
+const sections = [courses, address, businessHour];
+
 function displayInfo() {
     const footer = document.getElementById('footer');
-
-    // Create a div for courses
-    const coursesDiv = document.createElement('div');
-    coursesDiv.classList.add('Coursesstyle');
-
-    const coursesTitle = document.createElement('h1');
-    coursesTitle.textContent = Courses.title;
-    coursesDiv.appendChild(coursesTitle);
-
-    const coursesList = document.createElement('ul');
-    Courses.courses.forEach(course => {
-        const listItem = document.createElement('li');
-        const itemTitle = document.createElement('h4');
-        itemTitle.textContent = course;
-        listItem.appendChild(itemTitle);
-        coursesList.appendChild(listItem);
+    
+    sections.forEach(section => {
+        footer.appendChild(createSection(section));
     });
-    coursesDiv.appendChild(coursesList);
-    footer.appendChild(coursesDiv);
+}
 
-    // Create a div for address
-    const addressDiv = document.createElement('div');
-    addressDiv.classList.add( 'Addressstyle');
+function createSection(section) {
+    const sectionDiv = document.createElement('div');
+    
+    const sectionTitle = document.createElement('h1');
+    sectionTitle.textContent = section.title;
+    sectionDiv.appendChild(sectionTitle);
 
-    const addressTitle = document.createElement('h1');
-    addressTitle.textContent = Address.title;
-    addressDiv.appendChild(addressTitle);
-
-    const addressList = document.createElement('ul');
-    Address.addr.forEach(addre => {
+    const sectionList = document.createElement('ul');
+    section.items.forEach(item => {
         const listItem = document.createElement('li');
-        const itemTitle = document.createElement('h4');
-        itemTitle.textContent = addre;
-        listItem.appendChild(itemTitle);
-        addressList.appendChild(listItem);
+        listItem.textContent = item; 
+        sectionList.appendChild(listItem);
     });
-    addressDiv.appendChild(addressList);
-    footer.appendChild(addressDiv);
-
-
-      //create a div for business_hour
-    const BusinessDiv = document.createElement('div');
-    BusinessDiv.classList.add( 'Businessstyle');
-
-    const BusinessTitle = document.createElement('h1');
-    BusinessTitle.textContent = Business_Hour.title;
-    BusinessDiv.appendChild(BusinessTitle);
-
-    const BusinessList = document.createElement('ul');
-    Business_Hour.content.forEach(cont => {
-        const listItem = document.createElement('li');
-        const itemTitle = document.createElement('h4');
-        itemTitle.textContent = cont;
-        listItem.appendChild(itemTitle);
-        BusinessList.appendChild(listItem);
-    });
-    BusinessDiv.appendChild(BusinessList);
-    footer.appendChild(BusinessDiv);
+    
+    sectionDiv.appendChild(sectionList);
+    return sectionDiv;
 }
 
 window.addEventListener('load', displayInfo);
