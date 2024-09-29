@@ -20,19 +20,19 @@ document.getElementById('signupform').addEventListener('submit', function(event)
     let valid = true;
 
     if (!usernameregex.test(username)) {
-        document.getElementById('usernameError').textContent = 'Username should have letters and numbers only.';
+        document.getElementById('usernameError').textContent = '⚠️ Username should have letters and numbers only.';
         valid = false;
     }
     if (!phonenumberregex.test(phonenumber)) { // Corrected test method
-        document.getElementById('phonenumberError').textContent = 'Please enter a 10 digit number.';
+        document.getElementById('phonenumberError').textContent = '⚠️ Please enter a 10 digit number.';
         valid = false;
     }
     if (!emailregex.test(email)) {
-        document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+        document.getElementById('emailError').textContent = '⚠️ Please enter a valid email address.';
         valid = false;
     }
     if (!passwordregex.test(password)) {
-        document.getElementById('passwordError').textContent = 'Password must have at least 6 characters, letters and numbers.';
+        document.getElementById('passwordError').textContent = '⚠️ Password must have at least 6 characters, letters and numbers.';
         valid = false;
     }
 

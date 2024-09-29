@@ -5,12 +5,15 @@
 }
 body {
     font-family: Arial, sans-serif;
-    /* background-color: #f4f4f4; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100vh;    
+}
+#maincontainer{
+    width: 600px;
+    position:relative;
+    left:150px;
 }
 
 h1 {
@@ -24,14 +27,19 @@ label {
 
 input {
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    /* margin-bottom: 20px; */
+    border: 1px solid ;
+    border-radius: 5px;
+}
+input:hover{
+    border :2px solid orange;
 }
 
 .error {
-    color: red;
+    color: orangered;
     font-size:medium;
+    display:block;
+    margin-bottom:20px;
 }
 
 button {
