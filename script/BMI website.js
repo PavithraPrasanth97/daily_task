@@ -1,3 +1,23 @@
+let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length; 
+            showSlide(currentIndex);
+        }
+
+    
+showSlide(currentIndex);
+
+setInterval(nextSlide, 2000);
+
+
 document.getElementById("calculate").addEventListener("click", function() {
 
     const height = parseFloat(document.getElementById("heightid").value) / 100; 
@@ -42,3 +62,19 @@ document.getElementById("clear").addEventListener("click", function() {
     document.getElementById("weightid").value = "";
    
 });
+
+const navIcon = document.getElementById('nav-icon');
+const container = document.getElementById('container');
+const navlinks = document.getElementById('navlinks') 
+
+navIcon.addEventListener('click', () => {
+    navlinks.classList.toggle('active');
+    container.classList.toggle('active');
+});
+// navIcon.addEventListener('click', () => {
+
+//     container.classList.toggle('active');
+// });
+
+// const navIcon = document.getElementById('nav-icon');
+// const container = document.getElementById('container');
