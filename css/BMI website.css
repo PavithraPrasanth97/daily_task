@@ -136,11 +136,11 @@ body{
     font-size: 18px; 
     color: rgb(20, 141, 193);
     text-decoration: underline; 
-    transition: color 0.3s;
 }
 
 #maindiv a:hover {
     color: rgb(0, 102, 204); 
+
 }
 h3{
     font-weight: bold;
@@ -149,6 +149,49 @@ h3{
     color: #1e3a8a; 
     text-align: center;
 }
+@keyframes fadeInSlideUp {
+    20% {
+        transform: translateY(20px); 
+    }
+    100% {
+        transform: translateY(-10px); 
+    }
+}
+
+#maindiv p {
+    animation: fadeInSlideUp 5s infinite ; 
+}
+.whatsapp-container{
+    position:fixed;
+    top:520px;
+    right:0;
+    z-index: 1000;
+}
+.whatsapp-button{
+    display: flex;
+    align-items: center;
+    background-color: #25D366; 
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    width: 20px; 
+}
+.whatsapp-button:hover {
+    width: 150px; 
+}
+
+.whatsapp-text {
+    display: none;
+}
+
+.whatsapp-button:hover .whatsapp-text {
+    display: inline; 
+    margin-left: 10px; 
+}
+
 #contentdiv h2{
     font-weight: bold;
     font-size: x-large;
@@ -214,9 +257,11 @@ input{
     background-color: rgb(0, 102, 204); 
     border:none;
     cursor:pointer;
+    transition:transform 0.3s;
 }
 #calculate:hover, #clear:hover {
     background-color: rgb(0, 82, 153); 
+    transform: scale(1.05);
 }
 
 .calculateresult, .calculatemessage{
@@ -312,6 +357,7 @@ footer p {
     margin: 5px 0; 
     line-height: 1.5; 
 }
+
 
 @media (max-width: 768px) {
     body{
